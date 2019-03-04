@@ -1,13 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const SRC_DIR = path.join(__dirname, '/src');
+const DIST_DIR = path.join(__dirname, '/dist');
+
 module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
+  entry: `${SRC_DIR}/index.js`,
+  output: {
+    path: DIST_DIR,
+    publicPath: '/',
+    filename: 'main.js'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        include: SRC_DIR,
+        exclude: /node_modules/,
         use: 'babel-loader',
       },
       {
@@ -26,11 +35,6 @@ module.exports = {
       '.js',
       '.jsx'
     ]
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/',
-    filename: 'main.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
