@@ -1,0 +1,24 @@
+{
+  "name": "mern-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple MERN stack boilerplate",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/evanpowell/mern-boilerplate"
+  },
+  "keywords": [
+    "mern",
+    "boilerplate",
+    "mongodb",
+    "node",
+    "express",
+    "react",
+    "redux"
+  ],
+  "author": "evanpowell",
+  "license": "ISC"
+}
