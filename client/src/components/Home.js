@@ -19,7 +19,7 @@ export class Home extends Component {
     return (
       <div>
         <h1>MERN Stack Boilerplate</h1>
-        <p>A MERN stack application with Redux and React Router</p>
+        <p>A MERN stack starter app with Redux and React Router</p>
         <h2>SAMPLE POSTS:</h2>
         <div>
           { posts }
